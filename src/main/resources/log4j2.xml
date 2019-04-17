@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Configuration status="INFO" monitorInterval="10">
+    <Appenders>
+        <Console name="Console" target="SYSTEM_OUT">
+            <PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n"/>
+        </Console>
+        <RollingFile name="RollingFile" fileName="${sys:catalina.base}/logs/resi.log"
+                     filePattern="logs/$${date:yyyy-MM}/resi-%d{MM-dd-yyyy}-%i.log.gz">
+            <PatternLayout>
+                <Pattern>%d %p %c{1.} [%t] %m%n</Pattern>
+            </PatternLayout>
+            <Policies>
+                <TimeBasedTriggeringPolicy />
+                <SizeBasedTriggeringPolicy size="100 MB"/>
+            </Policies>
+            <DefaultRolloverStrategy max="5"/>
+            <ThresholdFilter level="DEBUG"/>
+
+        </RollingFile>
+    </Appenders>
+    <Loggers>
+        <Logger name="db.training" level="debug"/>
+        <Logger name="org.mongodb" level="info" />
+        <Logger name="org.hibernate" level="info" />
+        <Logger name="org.eclipse.jetty" level="info" />
+        <Logger name="com.zaxxer.hikari" level="info" />
+        <Logger name="org.apache.http" level="info" />
+        <Logger name="org.springframework" level="warn" />
+        <Logger name="org.springframework.security" level="info" />
+		<Logger name="net.sf.jasperreport" level="info" />
+        <Logger name="com.fasterxml" level="trace" />
+        <Root level="debug">
+            <AppenderRef ref="Console"/>
+        </Root>
+    </Loggers>
+</Configuration>

@@ -1,0 +1,17 @@
+= Lightway Java
+
+== Setup the DB
+
+We will use a Postgressql database.
+
+		createdb sample
+
+The sample assumes a user _postgres_ with password _p_.
+
+	createuser -s -d -U postgres -W
+
+
+Create the tables
+
+		create table bikes (id serial, name text, primary key (id));
+
