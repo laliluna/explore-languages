@@ -1,0 +1,90 @@
+= Todos
+
+== Creating todos
+
+As a user, I would like to create a todo, to see what I need to do.
+
+* A todo has a title
+* Store a todo
+* Show a list of todos
+
+.Mockup
+----
+* Buy beer
+* Prepare grill
+* Send invitations
+----
+
+== Manage todos
+
+As a user, I would like to update and delete todos, so that I can change the title of a todo or remove an obsolete todo.
+
+== Complete todos
+
+As a user, I would like to mark a todo as completed, so that I can see on my todo list what is already done.
+
+* Completed todos can be easily spotted in the todo list
+* If a todo is marked completed by accident, it should be possible to undo this
+* Show the date when the todo was completed
+
+== Comment on a todo
+
+As a user, I would like to add notes to a todo, so that I can add additional information
+
+* Notes should be a larger text input
+
+== Group todos in topics
+
+As a user, I would like to group todos by a topic, so that I can manage multiple todo lists in parallel.
+
+.Mockup
+----
+* Grill party
+  * Buy beer
+  * Prepare grill
+  * Send invitations
+
+* Holiday
+  * Create a packing lists
+  * Book hotel
+----
+
+* Create, update and delete topic
+* Delete removes all included todos
+
+== Use the application with multiple user
+
+As a user, I would like to see only my todos.
+
+* It is good enough to select the user on the front page
+* A todo (not a topic) belongs to a user
+* It is helpful to see when and by whom a todo was created and modified
+
+== Assign todos to other user
+
+As a user, I would like to assign a todo to other users, so that I can share the work to prepare a grill party.
+
+.Mockup
+----
+* Grill party
+  * Buy beer  -> Joe
+  * Prepare grill -> Me
+  * Send invitations  -> Anne
+----
+
+* As soon as I have a todo show the whole topic on my todo page
+* Mark my own todos so that I can distinguish them clearly from other users todos.
+
+== Real time update
+
+As a user, I would like to see a todo in my todo list, the moment somebody assigned it to me.
+
+== Filtering
+
+As a user, I would like to filter my todos, so that I have a better overview over current and important todos
+
+* Allow to hide completed todos (includes: hide topic if all todos are completed)
+* Allow to hide todos of other user
+* Default: hide all completed todos and todos of other user
+
+Mission completed ;-)
